@@ -1,4 +1,5 @@
 import { cfg } from '../config'
+import { HERO_GRAD, IMG } from './images'
 import { FaLaptopCode, FaMobileScreenButton, FaPaintbrush, FaChartLine, FaHandshake, FaRocket, FaLightbulb, FaFire } from 'react-icons/fa6'
 
 /* ============================================================
@@ -7,9 +8,9 @@ import { FaLaptopCode, FaMobileScreenButton, FaPaintbrush, FaChartLine, FaHandsh
    ============================================================ */
 
 export const slides = [
-  { kicker: 'Welcome to Codensons', kicker_sw: 'Karibu Codensons', title: 'Websites & apps that make your brand unforgettable', title_sw: 'Tovuti na programu zinazofanya chapa yako isisahaulike', text: 'Modern design. Smooth animation. Real results.', text_sw: 'Muundo wa kisasa. Uhuishaji laini. Matokeo halisi.', gradient: 'linear-gradient(135deg,#312e81,#be185d)', cta: ['View my work', '/work'] },
-  { kicker: 'Web & Mobile', kicker_sw: 'Wavuti na Simu', title: 'From idea to launch, end to end', title_sw: 'Kutoka wazo hadi uzinduzi, kila hatua', text: 'React, Capacitor and Supabase, done properly.', text_sw: 'React, Capacitor na Supabase, zikifanywa kwa ustadi.', gradient: 'linear-gradient(135deg,#0e7490,#4f46e5)', cta: ['Our services', '/company'] },
-  { kicker: "Let's work together", kicker_sw: 'Tufanye kazi pamoja', title: 'Your next project starts with one message', title_sw: 'Mradi wako unaofuata unaanza na ujumbe mmoja', text: 'Fast delivery. Fair pricing. Friendly support.', text_sw: 'Utoaji wa haraka. Bei nzuri. Huduma ya kirafiki.', gradient: 'linear-gradient(135deg,#c2410c,#9d174d)', cta: ['Contact me', '/contact'] },
+  { kicker: 'Welcome to Codensons', kicker_sw: 'Karibu Codensons', title: 'Websites & apps that make your brand unforgettable', title_sw: 'Tovuti na programu zinazofanya chapa yako isisahaulike', text: 'Modern design. Smooth animation. Real results.', text_sw: 'Muundo wa kisasa. Uhuishaji laini. Matokeo halisi.', gradient: HERO_GRAD[0], cta: ['View my work', '/work'] },
+  { kicker: 'Web & Mobile', kicker_sw: 'Wavuti na Simu', title: 'From idea to launch, end to end', title_sw: 'Kutoka wazo hadi uzinduzi, kila hatua', text: 'React, Capacitor and Supabase, done properly.', text_sw: 'React, Capacitor na Supabase, zikifanywa kwa ustadi.', gradient: HERO_GRAD[1], cta: ['Our services', '/company'] },
+  { kicker: "Let's work together", kicker_sw: 'Tufanye kazi pamoja', title: 'Your next project starts with one message', title_sw: 'Mradi wako unaofuata unaanza na ujumbe mmoja', text: 'Fast delivery. Fair pricing. Friendly support.', text_sw: 'Utoaji wa haraka. Bei nzuri. Huduma ya kirafiki.', gradient: HERO_GRAD[2], cta: ['Contact me', '/contact'] },
 ]
 
 export const services = [
@@ -84,7 +85,7 @@ export const faqs = [
 
 /* Replace with REAL client quotes. Ask clients for 1-2 sentences + permission to publish. */
 export const testimonials = [
-  { name: 'Client name', role: 'Barbershop owner', text: 'Replace this with a real quote from a happy client. Mention the result: time saved, more customers, better organisation.', avatar: '/images/avatars/avatar-1.jpg' },
-  { name: 'Client name', role: 'Business owner', text: 'Replace this with another real testimonial. Short and specific quotes build the most trust.', avatar: '/images/avatars/avatar-2.jpg' },
-  { name: 'Colleague or partner', role: 'Their job title', text: 'You can also use a quote from a teammate or lecturer about how you work and communicate.', avatar: '/images/avatars/avatar-3.jpg' },
+  { name: 'Client name', role: 'Barbershop owner', text: 'Replace this with a real quote from a happy client. Mention the result: time saved, more customers, better organisation.', avatar: IMG.avatars[0] },
+  { name: 'Client name', role: 'Business owner', text: 'Replace this with another real testimonial. Short and specific quotes build the most trust.', avatar: IMG.avatars[1] },
+  { name: 'Colleague or partner', role: 'Their job title', text: 'You can also use a quote from a teammate or lecturer about how you work and communicate.', avatar: IMG.avatars[2] },
 ]

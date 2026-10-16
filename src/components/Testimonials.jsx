@@ -27,14 +27,14 @@ export default function Testimonials() {
             <p className="font-serif text-xl italic leading-relaxed md:text-2xl">{x.text}</p>
             <div className="mt-8 flex items-center justify-center gap-3">
               <ImageBox src={x.avatar} className="h-12 w-12 rounded-full">
-                {!x.avatar && <span className="absolute inset-0 flex items-center justify-center font-bold text-white">{x.name[0]}</span>}
+                {!x.avatar && <span className="absolute inset-0 flex items-center justify-center font-bold text-on">{x.name[0]}</span>}
               </ImageBox>
               <div className="text-left"><p className="font-bold">{x.name}</p><p className="text-sm text-mu">{x.role}</p></div>
             </div>
           </motion.div>
         </AnimatePresence>
         <div className="mt-8 flex justify-center gap-2">
-          {testimonials.map((_, k) => <button key={k} aria-label={`Testimonial ${k + 1}`} onClick={() => setI(k)} className="h-2 rounded-full bg-gradient-to-r from-a1 to-a2 transition-all" style={{ width: k === i ? 30 : 8, opacity: k === i ? 1 : 0.35 }} />)}
+          {testimonials.map((_, k) => <button key={k} aria-label={`Testimonial ${k + 1}`} onClick={() => setI(k)} className="h-2 rounded-full bg-gradient-to-r from-a1 to-ge transition-all" style={{ width: k === i ? 30 : 8, opacity: k === i ? 1 : 0.35 }} />)}
         </div>
       </div>
     </section>

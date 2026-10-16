@@ -126,7 +126,7 @@ export default function Hero() {
           >
             <motion.div variants={item} className="flex flex-col justify-center gap-3 md:flex-row md:items-center md:justify-between">
               <div className="flex-1 min-w-0">
-                <motion.p variants={item} className="eyebrow text-cyan-200">{loc(s, 'kicker')}</motion.p>
+                <motion.p variants={item} className="eyebrow text-a2">{loc(s, 'kicker')}</motion.p>
                 <motion.h1 variants={item} className="mt-1 max-w-4xl font-display text-4xl font-bold leading-tight tracking-tight md:text-7xl">
                   {formatTitle(loc(s, 'title'))}
                 </motion.h1>

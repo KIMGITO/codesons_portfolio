@@ -46,8 +46,8 @@ function TechCard({ tech, index }) {
       onMouseLeave={() => setHovered(false)}
       className="glass glass-hover group flex flex-col items-center justify-center rounded-2xl p-5 text-center transition-all duration-300 cursor-default"
       style={{
-        borderColor: hovered ? `${tech.color}40` : undefined,
-        boxShadow: hovered ? `0 10px 25px -5px ${tech.color}25` : undefined,
+        borderColor: hovered ? 'rgb(var(--a1) / .45)' : undefined,
+        boxShadow: hovered ? '0 10px 25px -5px rgb(var(--a1) / .25)' : undefined,
       }}
     >
       <motion.div
@@ -61,7 +61,7 @@ function TechCard({ tech, index }) {
         }}
         className="text-3xl transition-colors duration-300"
         style={{
-          color: hovered ? tech.color : 'currentColor',
+          color: hovered ? 'rgb(var(--a1))' : 'currentColor',
         }}
       >
         <Icon />

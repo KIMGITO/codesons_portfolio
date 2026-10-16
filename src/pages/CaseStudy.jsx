@@ -25,7 +25,7 @@ export default function CaseStudy() {
 
         <div className="mb-10 flex flex-wrap items-center gap-3">
           <span className="text-sm text-mu">{t('stack')}:</span>
-          {c.tags.map((x) => <span key={x} className="rounded-full bg-gradient-to-r from-a1 to-a2 px-3 py-1 text-xs text-white">{x}</span>)}
+          {c.tags.map((x) => <span key={x} className="rounded-full bg-gradient-to-r from-a1 to-ge px-3 py-1 text-xs text-on">{x}</span>)}
           <span className="flex-1" />
           {c.demoUrl && <a href={c.demoUrl} target="_blank" rel="noopener noreferrer" className="btn !py-2 text-sm"><FaArrowUpRightFromSquare /> {t('liveDemo')}</a>}
           {c.repoUrl && <a href={c.repoUrl} target="_blank" rel="noopener noreferrer" className="btn-ghost !py-2 text-sm"><FaGithub /> Code</a>}
@@ -35,7 +35,7 @@ export default function CaseStudy() {
           {blocks.map(([Icon, label, text], i) => (
             <Reveal key={label} delay={i * 0.12}>
               <div className="glass h-full p-7">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-a1 to-a2 text-xl text-white"><Icon /></div>
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-a1 to-ge text-xl text-on"><Icon /></div>
                 <h2 className="text-xl font-bold">{label}</h2>
                 <p className="mt-3 leading-relaxed text-mu">{text}</p>
               </div>

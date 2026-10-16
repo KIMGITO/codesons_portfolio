@@ -24,7 +24,7 @@ export default function Pricing() {
             return (
               <Reveal key={p.key} delay={i * 0.12}>
                 <div className={`glass glass-hover relative flex h-full flex-col p-8 ${p.popular ? '!border-a2 shadow-2xl shadow-a2/20' : ''}`}>
-                  {p.popular && <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-a1 to-a2 px-4 py-1 text-xs font-bold text-white">{t('popular')}</span>}
+                  {p.popular && <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-a1 to-ge px-4 py-1 text-xs font-bold text-on">{t('popular')}</span>}
                   <h3 className="text-2xl font-bold">{loc(p, 'name')}</h3>
                   <p className="mt-3 text-4xl font-bold">
                     {numeric ? <><span className="text-sm font-normal text-mu">{t('from')} {cfg.currency}</span> <span className="gt">{p.price}</span></> : <span className="gt">{p.price || t('getQuote')}</span>}

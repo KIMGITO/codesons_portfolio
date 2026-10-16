@@ -32,7 +32,7 @@ export default function Navbar() {
 
   return (
     <>
-      <motion.div style={{ scaleX }} className="fixed left-0 right-0 top-0 z-[60] h-1 origin-left bg-gradient-to-r from-a1 via-a2 to-a3" />
+      <motion.div style={{ scaleX }} className="fixed left-0 right-0 top-0 z-[60] h-1 origin-left bg-gradient-to-r from-a1 to-ge" />
       <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled || menuOpen ? 'border-b border-tx/10 bg-bg/80 backdrop-blur-xl' : ''}`} style={{ paddingTop: 'env(safe-area-inset-top, 0px)' }}>
         <div className="wrap flex items-center justify-between py-3.5">
           <Link to="/" onClick={() => setMenu(false)} className="font-display text-xl font-bold"><span className="gt">{cfg.brand.slice(0, 5)}</span>{cfg.brand.slice(5)}</Link>

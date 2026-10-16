@@ -2,13 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ============ CENTRAL THEME TOKENS (space-separated RGB) ============ */
-/* midnight: ink-blue neutrals, cornflower + amber, sage tertiary */
-[data-theme='midnight'] { --bg: 13 15 21;    --bg2: 21 24 33;   --tx: 232 234 239; --mu: 139 146 161; --a1: 122 156 232; --a2: 226 169 108; --a3: 128 186 163; }
-/* light: warm paper, deep ink-blue + terracotta, deep teal tertiary */
-[data-theme='light']    { --bg: 247 245 240; --bg2: 255 253 249; --tx: 28 27 25;   --mu: 105 101 93;   --a1: 38 64 142;   --a2: 184 94 58;   --a3: 30 111 99;   }
-/* sunset: dark umber, burnt orange + sand, olive-sage tertiary */
-[data-theme='sunset']   { --bg: 25 17 14;    --bg2: 36 25 21;   --tx: 244 235 225; --mu: 176 154 139; --a1: 224 120 62;  --a2: 226 178 112; --a3: 150 170 112; }
+/* ============ CENTRAL THEME TOKENS (space-separated RGB) ============
+   Every theme is ONE colour family, built the same way:
+   a1 = primary, a2 = its complement (use sparingly: eyebrows, highlights),
+   a3 = analogous neighbour of a1 (chips, links), ge = gradient end (always sits
+   next to a1 on the wheel so gradients never turn muddy), on = text that sits
+   on a1/ge fills, h1/h2 = deep hero colours (hero text is always white). */
+
+/* midnight: ink-blue neutrals. blue (a1) + amber (complement) + soft cyan (analogous) */
+[data-theme='midnight'] { --bg: 13 15 21;    --bg2: 21 24 33;   --tx: 232 234 239; --mu: 139 146 161; --a1: 122 156 232; --a2: 232 178 110; --a3: 150 208 214; --ge: 150 208 214; --on: 13 15 21;    --h1: 17 24 52;  --h2: 40 74 140; }
+/* light: warm paper. deep blue (a1) + terracotta (complement) + deep teal-blue (analogous) */
+[data-theme='light']    { --bg: 247 245 240; --bg2: 255 253 249; --tx: 28 27 25;   --mu: 105 101 93;   --a1: 38 64 142;   --a2: 166 80 44;   --a3: 28 108 140;  --ge: 28 108 140;  --on: 255 253 249; --h1: 20 32 76;  --h2: 30 92 128; }
+/* sunset: dark umber. burnt orange (a1) + teal (complement) + sand (analogous). gradients run orange to sand */
+[data-theme='sunset']   { --bg: 25 17 14;    --bg2: 36 25 21;   --tx: 244 235 225; --mu: 176 154 139; --a1: 224 120 62;  --a2: 98 168 176;  --a3: 226 178 112; --ge: 226 178 112; --on: 25 17 14;    --h1: 54 26 14;  --h2: 150 72 32; }
 
 html { scroll-behavior: smooth; scroll-padding-top: 90px; }
 body {
@@ -34,6 +40,16 @@ p { text-wrap: pretty; }
 :focus-visible { outline: 2px solid rgb(var(--a3)); outline-offset: 3px; border-radius: 4px; }
 
 @layer components {
+  /* blog article blocks */
+  .story h2 { @apply mb-4 mt-12 font-serif text-2xl font-bold text-tx md:text-3xl; }
+  .story ul, .story ol { @apply mb-6 space-y-2 pl-6 font-serif text-lg leading-[1.7] text-tx/80 md:text-xl; max-width: 65ch; }
+  .story ul { list-style: disc; }
+  .story ol { list-style: decimal; }
+  .story li::marker { color: rgb(var(--a2)); font-weight: 700; }
+  .story .callout { @apply my-8 flex gap-4 rounded-2xl border border-a2/30 bg-a2/10 p-5; max-width: 65ch; }
+  .story .callout p { @apply mb-0 font-sans text-base leading-relaxed text-tx md:text-base; }
+  .story .callout p::first-letter { all: unset; }
+
   .wrap { @apply mx-auto w-full max-w-6xl px-5 md:px-8; }
   .section { @apply py-20 md:py-28; }
 
@@ -41,8 +57,8 @@ p { text-wrap: pretty; }
   .glass { @apply rounded-2xl border border-tx/10 bg-bg2 transition duration-200; }
   .glass-hover:hover { @apply -translate-y-0.5 border-tx/25; box-shadow: 0 1px 2px rgb(0 0 0 / .08), 0 12px 28px -12px rgb(0 0 0 / .35); }
 
-  /* primary: solid accent, text uses page bg for contrast in all 3 themes */
-  .btn { @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-lg border-0 bg-a1 px-6 py-3 text-[.95rem] font-semibold tracking-tight transition duration-200 hover:brightness-110 active:translate-y-px; color: rgb(var(--bg)); }
+  /* primary: solid accent, text uses --on for contrast in all 3 themes */
+  .btn { @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-lg border-0 bg-a1 px-6 py-3 text-[.95rem] font-semibold tracking-tight transition duration-200 hover:brightness-110 active:translate-y-px; color: rgb(var(--on)); }
   .btn-ghost { @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-lg border border-tx/20 bg-transparent px-6 py-3 text-[.95rem] font-semibold tracking-tight text-tx transition duration-200 hover:border-tx/40 hover:bg-tx/5 active:translate-y-px; }
 
   /* highlight text: solid accent, serif italic */
@@ -59,7 +75,7 @@ p { text-wrap: pretty; }
   .blob { @apply pointer-events-none absolute rounded-full opacity-[.12] blur-3xl; }
 
   .story p { @apply mb-6 font-serif text-lg leading-[1.8] text-tx/80 md:text-xl; max-width: 65ch; }
-  .story p:first-of-type::first-letter { @apply float-left mr-3 mt-1 font-serif text-6xl font-semibold leading-[.85] text-a2; }
+  .story > div:first-child p::first-letter { @apply float-left mr-3 mt-1 font-serif text-6xl font-semibold leading-[.85] text-a2; }
 }
 
 @keyframes marq { to { transform: translateX(-50%); } }

@@ -50,7 +50,7 @@ export default function Home() {
           {services.map((s, i) => { const Icon = s.Icon; return (
             <Reveal key={s.title} delay={i * 0.1}>
               <div className="glass glass-hover h-full p-7">
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-a1 to-a2 text-2xl text-white"><Icon /></div>
+                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-a1 to-ge text-2xl text-on"><Icon /></div>
                 <h3 className="text-xl font-bold">{loc(s, 'title')}</h3>
                 <p className="mt-2 text-sm text-mu">{loc(s, 'text')}</p>
               </div>

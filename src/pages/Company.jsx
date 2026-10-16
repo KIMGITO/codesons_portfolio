@@ -18,7 +18,7 @@ export default function Company() {
         {[[FaBullseye, 'Our mission', cfg.mission], [FaEye, 'Our vision', cfg.vision]].map(([Icon, t, x], i) => x && (
           <Reveal key={t} dir={i ? 'right' : 'left'}>
             <div className="glass h-full p-8">
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-a1 to-a3 text-2xl text-white"><Icon /></div>
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-a1 to-ge text-2xl text-on"><Icon /></div>
               <h3 className="text-2xl font-bold">{t}</h3><p className="mt-3 text-lg text-mu">{x}</p>
               {i === 0 && cfg.founded && <p className="mt-5 text-sm text-a3">Founded {cfg.founded}</p>}
             </div>
@@ -32,7 +32,7 @@ export default function Company() {
           {services.map((s, i) => { const Icon = s.Icon; return (
             <Reveal key={s.title} delay={i * 0.08}>
               <div className="glass glass-hover flex h-full gap-5 p-7">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-a1 to-a2 text-2xl text-white"><Icon /></div>
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-a1 to-ge text-2xl text-on"><Icon /></div>
                 <div><h3 className="text-xl font-bold">{loc(s, 'title')}</h3><p className="mt-2 text-mu">{loc(s, 'text')}</p></div>
               </div>
             </Reveal>

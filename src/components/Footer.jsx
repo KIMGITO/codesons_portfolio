@@ -24,7 +24,7 @@ export default function Footer() {
           <p className="mb-3 text-sm font-semibold">{t('findMe')}</p>
           <div className="flex flex-wrap gap-2">
             {socials.map(({ name, href, Icon, g }) => (
-              <a key={name} href={href} target="_blank" rel="noopener noreferrer" title={name} aria-label={name} className="flex h-10 w-10 items-center justify-center rounded-full text-white transition hover:-translate-y-1" style={{ background: g }}><Icon /></a>
+              <a key={name} href={href} target="_blank" rel="noopener noreferrer" title={name} aria-label={name} className="flex h-10 w-10 items-center justify-center rounded-full text-on transition hover:-translate-y-1" style={{ background: g }}><Icon /></a>
             ))}
           </div>
         </div>

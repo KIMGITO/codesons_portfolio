@@ -20,7 +20,7 @@ export default function About() {
         <Reveal dir="left" className="md:col-span-2">
           <div className="glass p-3">
             <ImageBox src={cfg.profileImage} alt={cfg.name} className="aspect-[4/5] rounded-2xl">
-              {!cfg.profileImage && <div className="absolute inset-0 flex items-center justify-center font-display text-8xl font-bold text-white/90">{initials}</div>}
+              {!cfg.profileImage && <div className="absolute inset-0 flex items-center justify-center font-display text-8xl font-bold text-on/90">{initials}</div>}
             </ImageBox>
           </div>
         </Reveal>
@@ -59,7 +59,7 @@ export default function About() {
                 <div className="glass glass-hover h-full overflow-hidden">
                   {c.image && <a href={c.image} target="_blank" rel="noopener noreferrer"><ImageBox src={c.image} alt={c.title} className="h-40" /></a>}
                   <div className="flex items-start gap-4 p-6">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-a2 to-a3 text-xl text-white"><FaAward /></div>
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-a2 to-ge text-xl text-on"><FaAward /></div>
                     <div><p className="font-bold">{c.title}</p><p className="text-sm text-mu">{c.issuer}</p><p className="mt-1 text-xs text-a3">{c.year}</p></div>
                   </div>
                 </div>

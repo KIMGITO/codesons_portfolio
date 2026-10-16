@@ -22,7 +22,7 @@ export default function Contact() {
           {socials.map(({ name, value, href, Icon, g }, i) => (
             <Reveal key={name} delay={(i % 3) * 0.08}>
               <a href={href} target="_blank" rel="noopener noreferrer" className="glass glass-hover flex items-center gap-4 p-6">
-                <div className="ring flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-2xl text-white" style={{ background: g }}><Icon /></div>
+                <div className="ring flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-2xl text-on" style={{ background: g }}><Icon /></div>
                 <div className="min-w-0"><p className="font-bold">{name}</p><p className="truncate text-sm text-mu">{value}</p></div>
               </a>
             </Reveal>

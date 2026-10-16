@@ -255,7 +255,7 @@ export default function Gallery() {
           {allLinks.map((l, i) => (
             <Reveal key={l.url + i} delay={(i % 3) * 0.08}>
               <div className="glass glass-hover flex items-center gap-4 p-5">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-a1 to-a2 text-white">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-a1 to-ge text-on">
                   <FaLink />
                 </div>
                 <a href={l.url} target="_blank" rel="noopener noreferrer" className="min-w-0 flex-1">

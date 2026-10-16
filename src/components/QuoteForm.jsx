@@ -67,7 +67,7 @@ export default function QuoteForm() {
             {cfg.email && <a className="btn-ghost" href={`mailto:${cfg.email}?subject=${encodeURIComponent('Project inquiry')}&body=${enc}`}><FaPaperPlane /> {t('email')}</a>}
             {cfg.bookingUrl && <a className="btn-ghost" href={cfg.bookingUrl} target="_blank" rel="noopener noreferrer"><FaCalendarCheck /> {t('bookCall')}</a>}
           </div>
-          {state === 'sent' && <p className="mt-4 rounded-xl bg-green-500/15 p-3 text-green-500" role="status">{t('sent')}</p>}
+          {state === 'sent' && <p className="mt-4 rounded-xl bg-a3/15 p-3 text-a3" role="status">{t('sent')}</p>}
           {state === 'error' && <p className="mt-4 rounded-xl bg-red-500/15 p-3 text-red-500" role="alert">{t('sendError')}</p>}
         </form>
       </Reveal>

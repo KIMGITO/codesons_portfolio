@@ -98,7 +98,7 @@ export default function ProjectCard({ project, variant = 'standard', delay = 0, 
               {tags.map((t) => (
                 <span
                   key={t}
-                  className="rounded-full bg-gradient-to-r from-a1 to-a2 px-3 py-1 text-xs font-medium text-white"
+                  className="rounded-full bg-gradient-to-r from-a1 to-ge px-3 py-1 text-xs font-medium text-on"
                 >
                   {t}
                 </span>
