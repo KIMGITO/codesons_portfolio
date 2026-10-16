@@ -1,0 +1,11 @@
+# Used only by `npm run cf:preview` (local Cloudflare preview with Pages Functions).
+# Copy to .dev.vars and paste the same values you use in .env for the SEO ones:
+VITE_NAME="Dennis Kimanthi"
+VITE_BRAND="Codensons"
+VITE_TAGLINE="I build fast, beautiful web and mobile products that turn visitors into customers."
+VITE_SITE_URL="http://localhost:8788"
+VITE_LOCATION="Nairobi, Kenya"
+VITE_OG_IMAGE="/images/og/og-image.jpg"
+VITE_SEO_TITLE="Dennis Kimanthi | Codensons - Web & Mobile App Developer in Nairobi, Kenya"
+VITE_SEO_DESCRIPTION="Codensons builds fast, modern websites, web apps and offline-first mobile apps for businesses in Nairobi and across Kenya."
+VITE_COMPANY_ABOUT=""

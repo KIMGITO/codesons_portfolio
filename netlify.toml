@@ -1,0 +1,9 @@
+# Only needed if you host on Netlify instead of Cloudflare Pages
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

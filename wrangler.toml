@@ -1,0 +1,6 @@
+# Cloudflare Pages configuration (https://developers.cloudflare.com/pages/)
+# Do NOT add [vars] here: set your VITE_* variables in the Cloudflare dashboard instead
+# (Pages project > Settings > Variables and secrets). Locally use .dev.vars (see .dev.vars.example).
+name = "codensons-portfolio"
+pages_build_output_dir = "./dist"
+compatibility_date = "2024-09-23"
